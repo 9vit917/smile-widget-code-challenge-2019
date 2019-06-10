@@ -23,6 +23,8 @@ class GiftCard(models.Model):
     def formatted_amount(self):
         return '${0:.2f}'.format(self.amount / 100)
 
+#  model for counting price with benefits with the new schedule
+
 class ProductPrice(models.Model):
     product = models.ForeignKey(Product, models.DO_NOTHING)
     date_start = models.DateField()
